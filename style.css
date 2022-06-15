@@ -1,0 +1,88 @@
+#separator{
+	border:solid;
+	border-width:1px;
+	position:absolute;
+	height:100vh;
+	width:0px;
+	top:0px;
+	right:19vw;
+	border-color:lightblue;
+	
+}
+.lbutton{
+	position:absolute;
+    right: 11vw;
+	 height:21px;
+	 width:80px;
+}
+.rbutton{
+	position:absolute;
+    right: 2vw;
+	height:21px;
+	 width:80px;
+}
+#button1{
+    top:10vh;
+}
+
+#xValues{
+	position:absolute;
+	right:10vw;
+	top:4vh;
+	font-size: 30px;
+}
+#button2{
+	top:15vh;
+	
+}
+#button3{
+	top:20vh;
+}
+#indv{
+	top:15vh;
+	font-size: 12px
+}
+
+#display{
+	position:absolute;
+	right:10vw;
+	top:30vh;
+	font-size: 30px;
+}
+#button4{
+	top:36vh;
+}
+#button5{
+	top:41vh;
+}
+
+#type{
+	position:absolute;
+	right:6.5vw;
+	top:50vh;
+	font-size: 30px;
+}
+#button6{
+	top:56vh;
+}
+#button7{
+	top:61vh;
+}
+#average{
+	position:absolute;
+	right:1vw;
+	top:70vh;
+	font-size: 30px;
+}
+#button8{
+	top:76vh;
+}
+
+#update{
+	position:absolute;
+    right: 5.8vw;
+	 top:85vh;
+	 height:40px;
+	 width:100px;
+	 
+}

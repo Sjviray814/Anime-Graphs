@@ -1,0 +1,74 @@
+Ideas
+
+scoreEpisodes (animeorEps)
+scorePie (animeorEps)
+scoreEpisodesBar(animeorEps)
+
+
+name, score, episodes, date, type
+
+x- name, episodes, score, month, types
+y- score, episodes, anime
+
+
+name, score
+name, episodes
+name, anime
+
+episodes, score
+episodes, episodes
+episodes, anime
+
+score, score
+score, episodes  pie
+score, anime  pie
+
+type, score
+type, episodes  pie
+type, anime  pie
+
+month, score  pie
+month, episodes  pie
+month, anime
+
+
+
+
+
+
+(name, score) 
+(name, episodes) 
+Show average line or not
+
+Types anime pie 
+Types anime Donut 
+Types episode pie 
+Types episode doughnut 
+Type anime bar
+Type episode bar
+Type score bar
+
+
+
+Episode Score
+Episode episodes
+
+
+
+Month anime pie
+Month episodes pie
+
+Month episode bar
+Month anime bar
+Month score bar
+
+
+
+Score Episodes
+
+Score pie chart anime
+Score pie chart Episodes
+
+Score bar anime
+Score bar episodes
+

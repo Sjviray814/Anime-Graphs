@@ -1,0 +1,48 @@
+1<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Anime Graphs</title>
+        <script src='https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js'></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        <div id='chart-container'>
+        <canvas id='chart'></canvas>
+        </div>
+
+        <div id='chart-container2'>
+            <canvas id='chart2'></canvas>
+        </div>
+
+        <script src='AnimeList.js'></script>
+        <script src='script.js'></script>
+		
+		 <div id='xValues'>xValues:</div>
+        <button class='lbutton' id='button1' onclick="reassign(0,'date')">Date</button>
+		 <button class='rbutton' id='button1' onclick="reassign(0,'episodes')">Episodes</button>
+		 <button class='lbutton' id='indv' onclick="reassign(0,'individual')">Indv Scores</button>
+		 <button class='rbutton' id='button2' onclick="reassign(0,'month')">Month</button>
+		 <button class='lbutton' id='button3' onclick="reassign(0,'types')">Types</button>
+		 <button class='rbutton' id='button3' onclick="reassign(0,'scores')">Scores</button>
+		 
+		 <div id='separator'></div>
+
+		 <div id='display'>Display:</div>
+		 <button class='lbutton' id='button4' onclick="reassign(1,'score')">Score</button>
+		 <button class='rbutton' id='button4' onclick="reassign(1,'episodes')">Episodes</button>
+		 <button class='lbutton' id='button5' onclick="reassign(1,'anime')">Anime</button>
+		 
+		 <div id='type'>Graph Type:</div>
+		 <button class='lbutton' id='button6' onclick="reassign(2,'bar')">Bar</button>
+		 <button class='rbutton' id='button6' onclick="reassign(2,'doughnut')">Doughnut</button>
+		 <button class='lbutton' id='button7' onclick="reassign(2,'pie')">Pie</button>
+		 
+		 <div id='average'>Date Average Line:</div>
+		 <button class='lbutton' id='button8' onclick="reassign(3,'yes')">Yes</button>
+		 <button class='rbutton' id='button8' onclick="reassign(3,'no')">No</button>
+		 
+		  <button  id='update' onclick="update()">Update</button>
+    </body>
+</html>
