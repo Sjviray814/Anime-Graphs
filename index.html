@@ -1,4 +1,4 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="eng">
     <head>
         <meta charset = "UTF-8">
@@ -8,6 +8,7 @@
     </head>
     
     <body>
+
         <div id='chart-container'>
         <canvas id='chart'></canvas>
         </div>
@@ -16,9 +17,8 @@
             <canvas id='chart2'></canvas>
         </div>
 
-        <script src='AnimeList.js'></script>
-        <script src='script.js'></script>
-		
+		<button onclick="authorize()" class="lbutton" id="auth">Authorize</button>
+		<button onclick="getData()" class="rbutton" id="data">Get Data</button>
 		 <div id='xValues'>xValues:</div>
         <button class='lbutton' id='button1' onclick="reassign(0,'date')">Date</button>
 		 <button class='rbutton' id='button1' onclick="reassign(0,'episodes')">Episodes</button>
@@ -44,5 +44,9 @@
 		 <button class='rbutton' id='button8' onclick="reassign(3,'no')">No</button>
 		 
 		  <button  id='update' onclick="update()">Update</button>
+
+		<script src='AnimeList.js'></script>
+        <script src='script.js'></script>
+		<script src="anilist.js"></script>
     </body>
 </html>

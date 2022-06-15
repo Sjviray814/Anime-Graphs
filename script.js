@@ -212,9 +212,9 @@ function nameScore(show, scoreOrEp){
     var count = 0;
     var total = 0;
     anime = [];
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const name = columns[0];
     const score = columns[1];
     const episodes = columns[2];
@@ -328,9 +328,9 @@ function typesPie(type, animeOrEp){
     var OVA = 0;
     var ONA = 0;
     var Special = 0;
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const type = columns[4];
 	 const episodes = parseFloat(columns[2]);
 	 if(animeOrEp == true){
@@ -383,15 +383,15 @@ table.forEach(row => {
 function episodeScore(scoreOrEp){
 	 bar();
 	scoreOrEp == false ? label = 'Episodes' : label = 'Score'; 
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const name = columns[0];
     const score = columns[1];
     const episodes = columns[2];
     const finishDate = columns[3];
     const type = columns[4];
-    anime.push(new Anime(name, score, episodes, finishDate, type));
+    if(score >=1) anime.push(new Anime(name, score, episodes, finishDate, type));
     
     
 
@@ -439,9 +439,9 @@ function monthAnime(type, animeOrEp){
 	 var memo = {};
 	 var values = [];
 	 var labels = [];
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const finishDate = columns[3];
     if(finishDate == 'N/A') return;
 	 const date = String(new Date(finishDate));
@@ -534,9 +534,9 @@ function monthEpisodesBar(animeOrEps){
 	 bar();
 	 animeOrEps == false ? label = 'Episodes' : label = 'Anime'; 
 	 var memo = {};
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const finishDate = columns[3];
     if(finishDate == 'N/A') return;
 	 const date = String(new Date(finishDate));
@@ -614,9 +614,9 @@ function typesAnimeBar(animeOrEp){
     var OVA = 0;
     var ONA = 0;
     var Special = 0;
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const type = columns[4];
 	 const episodes = parseFloat(columns[2]);
 	 if(animeOrEp == true){
@@ -672,9 +672,9 @@ function monthScoreBar(){
     var memo = {};
 	 var values = [];
 	 var labels = [];
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const finishDate = columns[3];
 	 var score = columns[1];
     if(finishDate === 'N/A') return;
@@ -748,9 +748,9 @@ function typeScoreBar(){
     var OVA = [0, 0];
     var ONA = [0, 0];
     var Special = [0, 0];
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const type = columns[4];
 	 var score = columns[1];
 	 if(score != 'N/A') {
@@ -807,15 +807,15 @@ table.forEach(row => {
 function scoreEpisodes(scoreOrEp){
 	 bar();
 	scoreOrEp == false ? label = 'Episodes' : label = 'Score'; 
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const name = columns[0];
     const score = columns[1];
     const episodes = columns[2];
     const finishDate = columns[3];
     const type = columns[4];
-    anime.push(new Anime(name, score, episodes, finishDate, type));
+    if(score >= 1) anime.push(new Anime(name, score, episodes, finishDate, type));
     
     
 
@@ -867,9 +867,9 @@ function scorePie(type, animeOrEps){
 	var eight = 0;
 	var nine = 0;
 	var ten = 0;
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const score = parseFloat(columns[1]);
 	 const episodes = parseFloat(columns[2]);
 	if(animeOrEps){
@@ -957,9 +957,9 @@ function scoreEpisodeBar(animeOrEps){
 	var eight = 0;
 	var nine = 0;
 	var ten = 0;
-    const table = data.split('\n').slice(1);
+    const table = animeData.split('\n').slice(1);
 table.forEach(row => {
-    const columns = row.split(',');
+    const columns = row.split('|');
     const finishDate = columns[3];
 	const episodes = parseFloat(columns[2]);
 	const score = parseFloat(columns[1]);
